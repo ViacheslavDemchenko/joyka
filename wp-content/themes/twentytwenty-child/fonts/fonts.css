@@ -1,0 +1,49 @@
+/* FONTS */
+
+@font-face {
+  font-family: 'Ubuntu-Bold';
+  src: url('../fonts/Ubuntu-bold/Ubuntu-Bold.eot');
+  src: url('../fonts/Ubuntu-bold/Ubuntu-Bold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Ubuntu-bold/Ubuntu-Bold.svg#Ubuntu-Bold') format('svg'),
+       url('../fonts/Ubuntu-bold/Ubuntu-Bold.ttf') format('truetype'),
+       url('../fonts/Ubuntu-bold/Ubuntu-Bold.woff') format('woff'),
+       url('../fonts/Ubuntu-bold/Ubuntu-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ubuntu-Medium';
+  src: url('../fonts/Ubuntu-medium/Ubuntu-Medium.eot');
+  src: url('../fonts/Ubuntu-medium/Ubuntu-Medium.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Ubuntu-medium/Ubuntu-Medium.svg#Ubuntu-Medium') format('svg'),
+       url('../fonts/Ubuntu-medium/Ubuntu-Medium.ttf') format('truetype'),
+       url('../fonts/Ubuntu-medium/Ubuntu-Medium.woff') format('woff'),
+       url('../fonts/Ubuntu-medium/Ubuntu-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ubuntu-Regular';
+  src: url('../fonts/Ubuntu-regular/Ubuntu-Regular.eot');
+  src: url('../fonts/Ubuntu-regular/Ubuntu-Regular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Ubuntu-regular/Ubuntu-Regular.svg#Ubuntu-Regular') format('svg'),
+       url('../fonts/Ubuntu-regular/Ubuntu-Regular.ttf') format('truetype'),
+       url('../fonts/Ubuntu-regular/Ubuntu-Regular.woff') format('woff'),
+       url('../fonts/Ubuntu-regular/Ubuntu-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ubuntu-Light';
+  src: url('../fonts/Ubuntu-light/Ubuntu-Light.eot');
+  src: url('../fonts/Ubuntu-light/Ubuntu-Light.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Ubuntu-light/Ubuntu-Light.svg#Ubuntu-Light') format('svg'),
+       url('../fonts/Ubuntu-light/Ubuntu-Light.ttf') format('truetype'),
+       url('../fonts/Ubuntu-light/Ubuntu-Light.woff') format('woff'),
+       url('../fonts/Ubuntu-light/Ubuntu-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
