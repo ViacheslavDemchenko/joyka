@@ -14,6 +14,17 @@
 })();
 "use strict";
 
+var mySwiper = new Swiper('.swiper-container', {
+  speed: 400,
+  slidesPerView: 6,
+  loopedSlides: 6,
+  loop: true,
+  freeMode: true,
+  spaceBetween: 39,
+  slidesOffsetBefore: 165
+});
+"use strict";
+
 /*!
  * @copyright Copyright (c) 2017 IcoMoon.io
  * @license   Licensed under MIT license

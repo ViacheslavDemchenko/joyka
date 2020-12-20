@@ -1,6 +1,6 @@
 <svg width="37" height="36" fill="none" xmlns="http://www.w3.org/2000/svg">
     <mask id="a" maskUnits="userSpaceOnUse" x="0" y="0" width="37" height="36">
-        <rect width="37" height="36" rx="18" fill="#1877F2"/>
+        <rect width="37" height="36" rx="18" fill="#fff"/>
     </mask>
     <g mask="url(#a)">
         <rect width="37" height="36" rx="18" fill="#fff"/>
