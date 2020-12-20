@@ -24,6 +24,16 @@
   var screenWidth = window.screen.availWidth;
   hamburger.addEventListener('click', mobileMenu);
 
+  function mobileMenuLinkClick() {
+    menuLinks.forEach(function (link) {
+      link.addEventListener('click', function () {
+        mobileMenuHide();
+      });
+    });
+  }
+
+  mobileMenuLinkClick();
+
   function mobileMenu() {
     window.addEventListener('resize', function () {
       screenWidth = window.screen.availWidth;
@@ -42,6 +52,22 @@
       body.classList.remove('no-scroll');
     }
   }
+
+  function mobileMenuHide() {
+    hamburger.classList.remove('active');
+    menu.classList.remove('nav-list--open');
+    body.classList.remove('no-scroll');
+  }
+
+  window.addEventListener('resize', function () {
+    screenWidth = window.screen.availWidth;
+
+    if (screenWidth > 1024) {
+      hamburger.classList.remove('active');
+      nav.classList.remove('nav--open');
+      body.classList.remove('no-scroll');
+    }
+  });
 })();
 "use strict";
 
