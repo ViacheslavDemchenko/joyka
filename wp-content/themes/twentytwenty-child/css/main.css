@@ -651,20 +651,9 @@ template {
 }
 
 .footer {
-  position: relative;
   width: 100%;
   padding: 4.4rem 0;
   background: #474747;
-}
-
-.footer::before {
-  position: absolute;
-  content: "";
-  top: -12.8rem;
-  right: 49.7rem;
-  width: 29.2rem;
-  height: 28.7rem;
-  background: url(../img/icons/creature.svg) 100% 100%/contain no-repeat;
 }
 
 /* BLOCKS */
@@ -1283,9 +1272,20 @@ template {
 }
 
 .footer-cols .col__right .logo--footer {
+  position: relative;
   width: 16.5rem;
   height: 6.5rem;
   margin-right: 3.3rem;
+}
+
+.footer-cols .col__right .logo--footer::before {
+  position: absolute;
+  content: "";
+  top: -19.8rem;
+  right: 7.7rem;
+  width: 29.2rem;
+  height: 28.7rem;
+  background: url(../img/icons/creature.svg) 100% 100%/contain no-repeat;
 }
 
 .footer-cols .col__right-slogan {
