@@ -53,6 +53,11 @@ var mySwiper = new Swiper('.swiper-container', {
   freeMode: true,
   spaceBetween: 39,
   slidesOffsetBefore: 165,
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+    clickable: true
+  },
   breakpoints: {
     // when window width is >= 320px
     320: {

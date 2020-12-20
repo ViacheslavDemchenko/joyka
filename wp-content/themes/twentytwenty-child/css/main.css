@@ -628,7 +628,7 @@ template {
 .faq-section {
   width: 100%;
   padding: 7.2rem 0 1.3rem 0;
-  background: url(../img/icons/faq_balls_left.svg) 0% 100%/contain no-repeat, url(../img/icons/faq_balls_right.svg) 100% 100%/contain no-repeat, #fff;
+  background: url(../img/icons/faq_balls_mobile.svg) -1rem -21%/cover no-repeat, #fff;
 }
 
 .faq-section__title {
@@ -636,8 +636,8 @@ template {
 }
 
 .reviews-section {
+  position: relative;
   width: 100%;
-  min-height: 100vh;
   padding: 1.3rem 0 16.3rem 0;
 }
 
@@ -1295,7 +1295,6 @@ template {
 .accordion .accordion__item-text {
   overflow: hidden;
   height: 0;
-  opacity: 0;
   font-family: "Ubuntu-Regular";
   font-weight: normal;
   font-style: normal;
@@ -1306,14 +1305,28 @@ template {
 }
 
 .accordion .accordion__item-title.accordion__item-title--active ~ .accordion__item-text {
-  height: 5rem;
-  opacity: 1;
+  min-height: 5rem;
+  height: auto;
   margin-top: 1.5rem;
   transition: all 0.9s ease-out;
 }
 
 .reviews-slider {
   margin-bottom: 5.6rem;
+}
+
+.swiper-pagination {
+  top: 6rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.swiper-pagination-bullet {
+  background: #FFD8BB;
+}
+
+.swiper-pagination-bullet-active {
+  background: #F99853;
 }
 
 .swiper-slide {
@@ -1501,14 +1514,14 @@ template {
   position: relative;
   width: 16.5rem;
   height: 6.5rem;
-  margin: 3.3rem 0 1.6rem 0;
+  margin: 0 0 1.6rem 0;
 }
 
 .footer-cols .col__right .logo--footer::before {
   position: absolute;
   content: "";
   background: url(../img/icons/creature.svg) 100% 100%/contain no-repeat;
-  top: -56.7rem;
+  top: -53.5rem;
   right: -4.3rem;
   width: 28.3rem;
   height: 24rem;
@@ -1860,6 +1873,7 @@ template {
 
   .faq-section {
     padding: 15.5rem 0 8.6rem 0;
+    background: url(../img/icons/faq_balls_left.svg) 0% 100%/contain no-repeat, url(../img/icons/faq_balls_right.svg) 100% 100%/contain no-repeat, #fff;
   }
 
   .reviews-section {
@@ -2168,7 +2182,7 @@ template {
   }
 
   .footer-cols .col__right .logo--footer {
-    margin-bottom: 0;
+    margin: 3.3rem 0 0 0;
   }
 
   .footer-cols .col__right .logo--footer::before {
