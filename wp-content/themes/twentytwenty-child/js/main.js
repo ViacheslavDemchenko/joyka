@@ -89,17 +89,23 @@ var mySwiper = new Swiper('.swiper-container', {
     320: {
       slidesPerView: 1,
       slidesOffsetBefore: 0
-    } // when window width is >= 480px
-    // 480: {
-    //   slidesPerView: 3,
-    //   spaceBetween: 30
-    // },
-    // when window width is >= 640px
-    // 640: {
-    //   slidesPerView: 4,
-    //   spaceBetween: 40
-    // }
-
+    },
+    560: {
+      slidesPerView: 2,
+      slidesOffsetBefore: 200
+    },
+    1024: {
+      slidesPerView: 3,
+      slidesOffsetBefore: 190
+    },
+    1366: {
+      slidesPerView: 4,
+      slidesOffsetBefore: 190
+    },
+    1920: {
+      slidesPerView: 6,
+      slidesOffsetBefore: 165
+    }
   }
 });
 "use strict";
