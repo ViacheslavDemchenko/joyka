@@ -1253,6 +1253,7 @@ template {
 .accordion {
   max-width: 118.2rem;
   margin: auto;
+  height: 52.6rem;
 }
 
 .accordion .accordion__item {
@@ -1298,7 +1299,6 @@ template {
   top: 48%;
   right: -.8rem;
   transform: rotate(90deg);
-  transition: transform 0.5s linear;
 }
 
 .accordion .accordion__item-title--active::before {
@@ -1314,14 +1314,11 @@ template {
   font-size: 1.4rem;
   line-height: 1.8rem;
   color: #000;
-  transition: all 0.9s ease-out;
 }
 
 .accordion .accordion__item-title.accordion__item-title--active ~ .accordion__item-text {
-  min-height: 5rem;
   height: auto;
   margin-top: 1.5rem;
-  transition: all 0.9s ease-out;
 }
 
 .reviews-slider {
@@ -1568,7 +1565,22 @@ template {
   margin-bottom: 4.2rem;
 }
 
+.header--form .logo {
+  position: relative;
+}
+
+.header--form .logo::before {
+  position: absolute;
+  content: "";
+  left: -2.2rem;
+  top: 27.2rem;
+  width: 6.5rem;
+  height: 188rem;
+  background: url(../img/icons/dots.svg) 100% 100%/contain no-repeat;
+}
+
 .header--form .logo--form {
+  display: block;
   width: 16.5rem;
   height: 6.5rem;
   margin-left: 1.8rem;
@@ -1578,6 +1590,394 @@ template {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 6.7rem;
+}
+
+.header--form .content-row:not(:last-child) {
+  margin-bottom: 4rem;
+}
+
+.header--form-content {
+  margin-left: 16.67%;
+  margin-bottom: 6.4rem;
+}
+
+.header--form-content input,
+.header--form-content select,
+.header--form-content option,
+.header--form-content textarea {
+  outline: none;
+  border: .1rem solid #E6E6E6;
+  border-radius: .2rem;
+}
+
+.header--form__title {
+  font-family: "Ubuntu-Bold";
+  font-weight: bold;
+  font-style: normal;
+  font-size: 2.4rem;
+  line-height: 3.1rem;
+  color: #4A4545;
+}
+
+.header--form-content .row__title {
+  position: relative;
+  margin-bottom: 5.8rem;
+  font-family: "Ubuntu-Bold";
+  font-weight: bold;
+  font-style: normal;
+  font-size: 2.4rem;
+  line-height: 3.1rem;
+  color: #4A4545;
+}
+
+.header--form-content .row__title::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: -10.7rem;
+  transform: translateY(-50%);
+  width: 6.5rem;
+  height: 6.4rem;
+  background: url(../img/icons/work_elipse_brown.svg) 100% 100%/cover no-repeat;
+}
+
+.header--form-content .row__title::after {
+  position: absolute;
+  top: .9rem;
+  left: -8.1rem;
+  z-index: 2;
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.78rem;
+  line-height: 3.7px;
+  color: #f8f8f8;
+}
+
+.header--form-content .row__title--first::after {
+  content: "1";
+}
+
+.header--form-content .row__title--second::after {
+  content: "2";
+}
+
+.header--form-content .row__title--third::after {
+  content: "3";
+}
+
+.header--form-content .row__title--fourth::after {
+  content: "4";
+}
+
+.header--form-content .row__title--fifth::after {
+  content: "5";
+}
+
+.header--form-content .card img {
+  filter: drop-shadow(0px 12px 85px rgba(221, 109, 28, 0.25));
+  border-radius: .4rem;
+  margin-bottom: 1.8rem;
+}
+
+.first-row__select {
+  display: flex;
+}
+
+.first-row__select .card:not(:last-child) {
+  margin-right: 6rem;
+}
+
+.first-row__select .card-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.first-row__select .card .name {
+  font-family: "Ubuntu-Bold";
+  font-weight: bold;
+  font-style: normal;
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+  color: #4A4545;
+}
+
+.first-row__select .card .price {
+  font-family: "Ubuntu-Bold";
+  font-weight: bold;
+  font-style: normal;
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+  color: #DD6D1C;
+}
+
+.first-row__select .card--active {
+  border: .5rem solid #2783FE;
+  box-shadow: 0 1.2rem 8.5rem rgba(221, 109, 28, 0.25);
+  border-radius: .9rem;
+}
+
+.second-row-message textarea {
+  width: 61.2rem;
+  min-height: 15.3rem;
+}
+
+.third-row-upload {
+  width: 16.8rem;
+  height: 16.7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
+  filter: drop-shadow(0px 12px 85px rgba(221, 109, 28, 0.25));
+  border-radius: .4rem;
+  background: #fff;
+  cursor: pointer;
+}
+
+.third-row-upload .upload__text {
+  width: 10rem;
+  margin: auto;
+  text-align: center;
+  font-family: "Ubuntu-Bold";
+  font-weight: bold;
+  font-style: normal;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  color: #DD6D1C;
+  opacity: .5;
+}
+
+.fourth-row--additional {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 4rem;
+}
+
+.fourth-row--additional .card {
+  width: 19rem;
+  height: 26.7rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fourth-row--additional .card:not(:last-child) {
+  margin-right: 1.6rem;
+}
+
+.fourth-row--additional .card img {
+  margin-bottom: 0;
+}
+
+.fourth-row--additional .card-info {
+  width: 100%;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.fourth-row--additional .card .name {
+  font-family: "Ubuntu-Bold";
+  font-weight: bold;
+  font-style: normal;
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+  color: #4A4545;
+}
+
+.fourth-row--additional .card .price {
+  font-family: "Ubuntu-Bold";
+  font-weight: bold;
+  font-style: normal;
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+  color: #DD6D1C;
+}
+
+.fourth-row--additional .card .total-price {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-family: "Ubuntu-Bold";
+  font-weight: bold;
+  font-style: normal;
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+  color: #DD6D1C;
+}
+
+.fourth-row--additional .card .total-num {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 8.8rem;
+  padding: .5rem 1rem .5rem 1rem;
+  border: .2rem solid #C9CEDD;
+  border-radius: .4rem;
+}
+
+.fourth-row--additional .card .plus svg {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: .7rem;
+  width: 1rem;
+  height: 1rem;
+  padding: .1rem;
+  fill: #8E94A9;
+  cursor: pointer;
+}
+
+.fourth-row--additional .card .minus svg {
+  position: absolute;
+  top: 50%;
+  left: .7rem;
+  transform: translateY(-50%);
+  width: 1rem;
+  height: 1rem;
+  padding: .1rem;
+  fill: #8E94A9;
+  cursor: pointer;
+}
+
+.fourth-row--additional .card .img-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 16.8rem;
+  height: 16.7rem;
+  margin-bottom: 1.8rem;
+  border-radius: .5rem;
+  box-shadow: 0.1rem 0.1rem 0.1rem 0.7rem rgba(0, 0, 0, 0.03);
+  background: #fff;
+}
+
+.fifth-row-cols {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fifth-row-cols .select-city {
+  width: 26.8rem;
+  padding: .8rem 3.4rem .8rem 1.2rem;
+}
+
+.fifth-row-cols .input-wrap {
+  display: flex;
+  flex-direction: column;
+  width: 26.8rem;
+}
+
+.fifth-row-cols .input-wrap:not(:last-child) {
+  margin-bottom: 3.2rem;
+}
+
+.fifth-row-cols .input-wrap .wrap {
+  display: flex;
+}
+
+.fifth-row-cols .select-title {
+  margin-bottom: 0.6rem;
+  font-family: "Ubuntu-Regular";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  color: #828282;
+}
+
+.fifth-row-cols label {
+  margin-bottom: 0.6rem;
+  font-family: "Ubuntu-Regular";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  color: #828282;
+}
+
+.fifth-row-cols input[name="promocode-phone"] {
+  width: 15.3rem;
+}
+
+.fifth-row-cols input {
+  padding: .7rem;
+}
+
+.fifth-row-cols .btn__promo {
+  width: 10.7rem;
+  height: 3.5rem;
+  text-align: center;
+  margin-left: 0.8rem;
+  font-family: "Ubuntu-Medium";
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: #DD6D1C;
+  background: #FFD8BB;
+  border-radius: .2rem;
+}
+
+.fifth-row-cols .warning {
+  font-family: "Ubuntu-Regular";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 1.3rem;
+  color: #F57373;
+}
+
+.sixth-row .total {
+  margin-bottom: .9rem;
+  font-family: "Ubuntu-Regular";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  color: #828282;
+}
+
+.sixth-row .total__sum {
+  font-family: "Ubuntu-Bold";
+  font-weight: bold;
+  font-style: normal;
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+  color: #4a4545;
+}
+
+.sixth-row .wrap {
+  display: flex;
+}
+
+.sixth-row .btn__pay {
+  width: 16.8rem;
+  height: 4.4rem;
+  text-align: center;
+  margin-right: 2.1rem;
+  font-family: "Ubuntu-Medium";
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  color: #FFFFFF;
+  background: #F99853;
+  border-radius: .2rem;
+}
+
+.sixth-row input[type="checkbox"] {
+  margin-top: .3rem;
+  background: #F99853;
+}
+
+.sixth-row .policy-agreement {
+  width: 22rem;
+  margin-left: 0.6rem;
 }
 
 @media screen and (min-width: 320px) {
@@ -2081,6 +2481,10 @@ template {
     margin-right: 2.5px;
   }
 
+  .footer-cols .contacts__link {
+    margin-top: 0;
+  }
+
   .footer-cols .socials-list {
     margin-left: 2.5px;
     margin-right: 2.5px;
@@ -2140,7 +2544,7 @@ template {
 
 @media (min-width: 1500px) {
   .header-content {
-    background: url(../img/header__img@1x.png) 82% -5rem/80rem 87rem no-repeat, url(../img/icons/header_bg.svg) 64% 100%/cover no-repeat;
+    background: url(../img/header__img@1x.png) 82% -5rem/80rem 87rem no-repeat, url(../img/icons/header_bg.svg) 64% 7rem/100% 100% no-repeat;
   }
 }
 
