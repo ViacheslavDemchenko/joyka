@@ -1569,14 +1569,20 @@ template {
   position: relative;
 }
 
-.header--form .logo::before {
+.header--form .logo--footer {
+  position: relative;
+}
+
+.header--form .logo--footer::before {
   position: absolute;
   content: "";
-  left: -2.2rem;
-  top: 27.2rem;
-  width: 6.5rem;
-  height: 188rem;
-  background: url(../img/icons/dots.svg) 100% 100%/contain no-repeat;
+  right: 7.7rem;
+  left: 17.7rem !important;
+  top: -48rem !important;
+  transform: rotate(0deg) !important;
+  width: 41rem !important;
+  height: 41rem !important;
+  background: url(../img/icons/creature_form.svg) 100% 100%/contain no-repeat !important;
 }
 
 .header--form .logo--form {
@@ -1590,7 +1596,8 @@ template {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 6.7rem;
+  margin: 8rem 0 6.7rem 0;
+  margin-top: 8rem;
 }
 
 .header--form .content-row:not(:last-child) {
@@ -1606,6 +1613,12 @@ template {
 .header--form-content select,
 .header--form-content option,
 .header--form-content textarea {
+  font-family: "Ubuntu-Medium";
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: #4A4545;
   outline: none;
   border: .1rem solid #E6E6E6;
   border-radius: .2rem;
@@ -2540,11 +2553,25 @@ template {
     height: 28.7rem;
     background: url(../img/icons/creature.svg) 100% 100%/contain no-repeat;
   }
+
+  .header--form .logo::before {
+    position: absolute;
+    content: "";
+    left: -2.2rem;
+    top: 27.2rem;
+    width: 6.5rem;
+    height: 188rem;
+    background: url(../img/icons/dots.svg) 100% 100%/contain no-repeat;
+  }
+
+  .header--form__top {
+    margin-bottom: 0;
+  }
 }
 
 @media (min-width: 1500px) {
   .header-content {
-    background: url(../img/header__img@1x.png) 82% -5rem/80rem 87rem no-repeat, url(../img/icons/header_bg.svg) 64% 7rem/100% 100% no-repeat;
+    background: url(../img/header__img@1x.png) 82% -5rem/80rem 87rem no-repeat, url(../img/icons/header_bg.svg) 64% 5rem/100% 100% no-repeat;
   }
 }
 
