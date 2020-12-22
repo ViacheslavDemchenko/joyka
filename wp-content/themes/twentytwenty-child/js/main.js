@@ -86,7 +86,7 @@
 
     if (screenWidth > 1024) {
       hamburger.classList.remove('active');
-      nav.classList.remove('nav--open');
+      menu.classList.remove('nav--open');
       body.classList.remove('no-scroll');
     }
   });

@@ -868,6 +868,11 @@ template {
   transform: rotate(-45deg);
 }
 
+.langs--mobile {
+  width: 12rem;
+  margin-right: 5rem;
+}
+
 .btn {
   display: block;
   background: linear-gradient(180deg, #7BC0FF 0%, #2451F1 100%), linear-gradient(180deg, #FFFFFF 0%, #F7F5FF 100%);
@@ -1969,8 +1974,9 @@ template {
 }
 
 .slider-wrap {
-  width: 100%;
+  width: 90%;
   overflow: hidden;
+  margin: auto;
 }
 
 .total-slider {
@@ -2927,6 +2933,10 @@ template {
   .fourth-row--additional {
     margin: 0 0 4rem 0;
     padding-top: 2rem;
+  }
+
+  .fourth-row--additional .swiper-wrapper {
+    flex-wrap: wrap;
   }
 
   .fourth-row--additional .card .name {
