@@ -23,6 +23,7 @@
     // loopedSlides: 1,
     loop: true,
     spaceBetween: 10,
+    freeMode: true,
     // centeredSlides: true,
     slidesOffsetBefore: 50,
     slidesOffsetAfter: 100,
