@@ -2935,10 +2935,6 @@ template {
     padding-top: 2rem;
   }
 
-  .fourth-row--additional .swiper-wrapper {
-    flex-wrap: wrap;
-  }
-
   .fourth-row--additional .card .name {
     font-family: "Ubuntu-Bold";
     font-weight: bold;
