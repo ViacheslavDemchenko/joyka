@@ -17,6 +17,71 @@
 ;
 
 (function () {
+  var additionalSwiper = new Swiper('.fourth-row--additional', {
+    speed: 200,
+    slidesPerView: 5,
+    loopedSlides: 5,
+    loop: true,
+    spaceBetween: 16,
+    slidesOffsetBefore: 25,
+    loopAdditionalSlides: 5,
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 2,
+        slidesOffsetBefore: -20,
+        centeredSlides: true
+      },
+      375: {
+        slidesPerView: 2,
+        slidesOffsetBefore: -25,
+        centeredSlides: true
+      },
+      425: {
+        slidesPerView: 2,
+        slidesOffsetBefore: -35,
+        centeredSlides: true
+      },
+      560: {
+        slidesPerView: 3,
+        slidesOffsetBefore: 70,
+        centeredSlides: true
+      },
+      768: {
+        slidesPerView: 3,
+        slidesOffsetBefore: -10,
+        centeredSlides: true
+      },
+      1024: {
+        slidesPerView: 4,
+        slidesOffsetBefore: -70,
+        centeredSlides: true
+      },
+      1366: {
+        slidesPerView: 5,
+        slidesOffsetBefore: 110
+      },
+      1920: {
+        slidesPerView: 5,
+        slidesOffsetBefore: 50
+      }
+    }
+  });
+  var screenWidth = window.screen.availWidth;
+
+  if (screenWidth >= 1366) {
+    additionalSwiper.destroy(true, true);
+  }
+})();
+"use strict";
+
+;
+
+(function () {
   var hamburger = document.getElementById('menu__button');
   var menu = document.querySelector('.nav');
   var menuLinks = document.querySelectorAll('.nav__link');
@@ -71,43 +136,46 @@
 })();
 "use strict";
 
-var mySwiper = new Swiper('.swiper-container', {
-  speed: 400,
-  slidesPerView: 6,
-  loopedSlides: 6,
-  loop: true,
-  freeMode: true,
-  spaceBetween: 39,
-  slidesOffsetBefore: 165,
-  pagination: {
-    el: '.swiper-pagination',
-    type: 'bullets',
-    clickable: true
-  },
-  breakpoints: {
-    // when window width is >= 320px
-    320: {
-      slidesPerView: 1,
-      slidesOffsetBefore: 0
+;
+
+(function () {
+  var reviewsSwiper = new Swiper('.reviews', {
+    speed: 400,
+    slidesPerView: 6,
+    loopedSlides: 6,
+    loop: true,
+    freeMode: true,
+    spaceBetween: 39,
+    slidesOffsetBefore: 165,
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true
     },
-    560: {
-      slidesPerView: 2,
-      slidesOffsetBefore: 200
-    },
-    1024: {
-      slidesPerView: 3,
-      slidesOffsetBefore: 190
-    },
-    1366: {
-      slidesPerView: 4,
-      slidesOffsetBefore: 190
-    },
-    1920: {
-      slidesPerView: 6,
-      slidesOffsetBefore: 165
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        slidesOffsetBefore: 0
+      },
+      560: {
+        slidesPerView: 2,
+        slidesOffsetBefore: 200
+      },
+      1024: {
+        slidesPerView: 3,
+        slidesOffsetBefore: 190
+      },
+      1366: {
+        slidesPerView: 4,
+        slidesOffsetBefore: 190
+      },
+      1920: {
+        slidesPerView: 6,
+        slidesOffsetBefore: 165
+      }
     }
-  }
-});
+  });
+})();
 "use strict";
 
 /*!

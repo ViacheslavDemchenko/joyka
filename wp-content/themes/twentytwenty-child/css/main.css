@@ -646,9 +646,26 @@ template {
 }
 
 .footer {
+  position: relative;
   width: 100%;
   padding: 2.4rem 0 3.2rem 0;
   background: #474747;
+}
+
+.footer::before {
+  display: block;
+  position: absolute;
+  content: "";
+  bottom: 48.5rem;
+  right: 0;
+  transform: rotate(0deg);
+  width: 41rem;
+  height: 41rem;
+  background: url(../img/icons/creature_form.svg) 100% 100%/contain no-repeat;
+}
+
+.footer--main::before {
+  display: none;
 }
 
 /* BLOCKS */
@@ -1253,7 +1270,6 @@ template {
 .accordion {
   max-width: 118.2rem;
   margin: auto;
-  height: 52.6rem;
 }
 
 .accordion .accordion__item {
@@ -1325,37 +1341,37 @@ template {
   margin-bottom: 5.6rem;
 }
 
-.swiper-pagination {
+.reviews-slider .swiper-pagination {
   top: 6rem;
   left: 50%;
   transform: translateX(-50%);
 }
 
-.swiper-pagination-bullet {
+.reviews-slider .swiper-pagination-bullet {
   background: #FFD8BB;
 }
 
-.swiper-pagination-bullet:not(:last-child) {
+.reviews-slider .swiper-pagination-bullet:not(:last-child) {
   margin-right: .8rem;
 }
 
-.swiper-pagination-bullet-active {
+.reviews-slider .swiper-pagination-bullet-active {
   background: #F99853;
 }
 
-.swiper-slide {
+.review {
   min-height: 40.4rem;
 }
 
-.swiper-slide .slider__img {
+.review .slider__img {
   margin-bottom: 2.4rem;
 }
 
-.swiper-slide .slider__img img {
+.review .slider__img img {
   width: 100%;
 }
 
-.swiper-slide .slider__title {
+.review .slider__title {
   text-align: center;
   margin-bottom: 2.4rem;
   padding: 0 1rem;
@@ -1367,7 +1383,7 @@ template {
   color: #000;
 }
 
-.swiper-slide .slider__text {
+.review .slider__text {
   text-align: center;
   padding: 0 1rem;
   font-family: "Ubuntu-Regular";
@@ -1556,39 +1572,18 @@ template {
   color: #fff;
 }
 
-.header--form .nav-list--form,
-.header--form .nav__btn {
-  display: none;
-}
-
 .header--form .nav {
   margin-bottom: 4.2rem;
 }
 
-.header--form .logo {
-  position: relative;
-}
-
-.header--form .logo--footer {
-  position: relative;
-}
-
-.header--form .logo--footer::before {
-  position: absolute;
-  content: "";
-  right: 7.7rem;
-  left: 17.7rem !important;
-  top: -48rem !important;
-  transform: rotate(0deg) !important;
-  width: 41rem !important;
-  height: 41rem !important;
-  background: url(../img/icons/creature_form.svg) 100% 100%/contain no-repeat !important;
+.header--form .col__left--dn::before {
+  display: none;
 }
 
 .header--form .logo--form {
   display: block;
-  width: 16.5rem;
-  height: 6.5rem;
+  width: 12.2rem;
+  height: 4.8rem;
   margin-left: 1.8rem;
 }
 
@@ -1597,15 +1592,19 @@ template {
   justify-content: center;
   align-items: center;
   margin: 8rem 0 6.7rem 0;
-  margin-top: 8rem;
+}
+
+.header--form .content-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .header--form .content-row:not(:last-child) {
-  margin-bottom: 4rem;
+  margin-bottom: 2.4rem;
 }
 
 .header--form-content {
-  margin-left: 16.67%;
   margin-bottom: 6.4rem;
 }
 
@@ -1628,14 +1627,14 @@ template {
   font-family: "Ubuntu-Bold";
   font-weight: bold;
   font-style: normal;
-  font-size: 2.4rem;
-  line-height: 3.1rem;
+  font-size: 1.7rem;
+  line-height: 2.3rem;
   color: #4A4545;
 }
 
 .header--form-content .row__title {
   position: relative;
-  margin-bottom: 5.8rem;
+  margin-bottom: 1.6rem;
   font-family: "Ubuntu-Bold";
   font-weight: bold;
   font-style: normal;
@@ -1647,81 +1646,138 @@ template {
 .header--form-content .row__title::before {
   position: absolute;
   content: "";
-  top: 50%;
-  left: -10.7rem;
-  transform: translateY(-50%);
-  width: 6.5rem;
-  height: 6.4rem;
+  top: -4rem;
+  width: 4.5rem;
+  height: 4.4rem;
   background: url(../img/icons/work_elipse_brown.svg) 100% 100%/cover no-repeat;
 }
 
 .header--form-content .row__title::after {
   position: absolute;
-  top: .9rem;
-  left: -8.1rem;
   z-index: 2;
-  font-family: "Segoe UI";
+  top: -4rem;
+  z-index: 2;
+  font-family: "Ubuntu-Bold";
+  font-weight: bold;
   font-style: normal;
-  font-weight: 600;
-  font-size: 2.78rem;
-  line-height: 3.7px;
+  font-size: 2.7rem;
+  line-height: 3.7rem;
   color: #f8f8f8;
 }
 
 .header--form-content .row__title--first::after {
   content: "1";
+  left: 9.5rem;
+}
+
+.header--form-content .row__title--first::before {
+  left: 8rem;
 }
 
 .header--form-content .row__title--second::after {
   content: "2";
+  left: 10.5rem;
+}
+
+.header--form-content .row__title--second::before {
+  left: 9rem;
 }
 
 .header--form-content .row__title--third::after {
   content: "3";
+  left: 10.5rem;
+}
+
+.header--form-content .row__title--third::before {
+  left: 9rem;
 }
 
 .header--form-content .row__title--fourth::after {
   content: "4";
+  left: 14.5rem;
+}
+
+.header--form-content .row__title--fourth::before {
+  left: 13rem;
 }
 
 .header--form-content .row__title--fifth::after {
   content: "5";
+  left: 8.5rem;
+}
+
+.header--form-content .row__title--fifth::before {
+  left: 7rem;
+}
+
+.header--form-content .row__title__subtitle {
+  margin: 0 20.9rem 0 1rem;
+  text-align: center;
+  font-family: "Ubuntu-Regular";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  color: #828282;
 }
 
 .header--form-content .card img {
   filter: drop-shadow(0px 12px 85px rgba(221, 109, 28, 0.25));
   border-radius: .4rem;
-  margin-bottom: 1.8rem;
+  margin-bottom: 1rem;
+  height: 95%;
+  width: 95%;
 }
 
 .first-row__select {
+  width: 95%;
+  margin: 0 auto 4rem auto;
   display: flex;
+  justify-content: center;
+}
+
+.first-row__select .card {
+  width: 14.1rem;
+  min-height: 14.8rem;
 }
 
 .first-row__select .card:not(:last-child) {
-  margin-right: 6rem;
+  margin-right: 1rem;
 }
 
-.first-row__select .card-info {
+.first-row__select .card .img-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 14.1rem;
+  min-height: 14.8rem;
+  border-radius: .5rem;
+  box-shadow: 0.1rem 0.1rem 0.1rem 0.7rem rgba(0, 0, 0, 0.03);
+  background: #fff;
+}
+
+.first-row__select .card .img-wrap .card-info {
   display: flex;
   justify-content: space-between;
+  width: 91%;
 }
 
-.first-row__select .card .name {
+.first-row__select .card .img-wrap .name {
   font-family: "Ubuntu-Bold";
   font-weight: bold;
   font-style: normal;
-  font-size: 1.8rem;
-  line-height: 2.3rem;
+  font-size: 0.85rem;
+  line-height: 1.1rem;
   color: #4A4545;
 }
 
-.first-row__select .card .price {
+.first-row__select .card .img-wrap .price {
   font-family: "Ubuntu-Bold";
   font-weight: bold;
   font-style: normal;
-  font-size: 1.8rem;
-  line-height: 2.3rem;
+  font-size: 0.85rem;
+  line-height: 1.1rem;
   color: #DD6D1C;
 }
 
@@ -1731,8 +1787,13 @@ template {
   border-radius: .9rem;
 }
 
+.second-row-message {
+  position: relative;
+  margin-bottom: 10rem;
+}
+
 .second-row-message textarea {
-  width: 61.2rem;
+  width: 28.8rem;
   min-height: 15.3rem;
 }
 
@@ -1743,6 +1804,7 @@ template {
   flex-direction: column;
   align-items: center;
   padding-top: 2rem;
+  margin-bottom: 8rem;
   filter: drop-shadow(0px 12px 85px rgba(221, 109, 28, 0.25));
   border-radius: .4rem;
   background: #fff;
@@ -1765,11 +1827,12 @@ template {
 .fourth-row--additional {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 4rem;
+  margin: 3rem 0 4rem 0;
+  padding-top: 6rem;
 }
 
 .fourth-row--additional .card {
-  width: 19rem;
+  width: 19rem !important;
   height: 26.7rem;
   margin-bottom: 2rem;
   display: flex;
@@ -1796,8 +1859,8 @@ template {
   font-family: "Ubuntu-Bold";
   font-weight: bold;
   font-style: normal;
-  font-size: 1.8rem;
-  line-height: 2.3rem;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
   color: #4A4545;
 }
 
@@ -1805,8 +1868,8 @@ template {
   font-family: "Ubuntu-Bold";
   font-weight: bold;
   font-style: normal;
-  font-size: 1.8rem;
-  line-height: 2.3rem;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
   color: #DD6D1C;
 }
 
@@ -1828,6 +1891,12 @@ template {
   align-items: center;
   min-width: 8.8rem;
   padding: .5rem 1rem .5rem 1rem;
+  font-family: "Ubuntu-Regular";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 2.1rem;
+  color: #333333;
   border: .2rem solid #C9CEDD;
   border-radius: .4rem;
 }
@@ -1863,15 +1932,78 @@ template {
   justify-content: center;
   width: 16.8rem;
   height: 16.7rem;
-  margin-bottom: 1.8rem;
   border-radius: .5rem;
   box-shadow: 0.1rem 0.1rem 0.1rem 0.7rem rgba(0, 0, 0, 0.03);
   background: #fff;
 }
 
+.fourth-row--additional .swiper-pagination {
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.fourth-row--additional .swiper-pagination-bullet {
+  background: #FFD8BB;
+}
+
+.fourth-row--additional .swiper-pagination-bullet:not(:last-child) {
+  margin-right: .8rem;
+}
+
+.fourth-row--additional .swiper-pagination-bullet-active {
+  background: #F99853;
+}
+
+.row__title--fourth {
+  text-align: center;
+  width: 30rem;
+}
+
+.slider-wrap {
+  width: 100%;
+  overflow: hidden;
+}
+
+.swiper-wrapper {
+  flex-wrap: wrap !important;
+}
+
+.total-slider {
+  margin-bottom: 5rem;
+  font-family: "Ubuntu-Regular";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  color: #828282;
+}
+
+.total__sum-slider {
+  font-family: "Ubuntu-Bold";
+  font-weight: bold;
+  font-style: normal;
+  font-size: 1.4rem;
+  line-height: 2.3rem;
+  color: #828282;
+}
+
 .fifth-row-cols {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.fifth-row-cols .col {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 7.5px;
+  margin-right: 7.5px;
+  margin-bottom: 3.2rem;
+}
+
+.fifth-row-cols .col--second {
+  order: 2;
 }
 
 .fifth-row-cols .select-city {
@@ -1945,6 +2077,10 @@ template {
   color: #F57373;
 }
 
+.sixth-row {
+  margin-bottom: 35rem;
+}
+
 .sixth-row .total {
   margin-bottom: .9rem;
   font-family: "Ubuntu-Regular";
@@ -1966,13 +2102,19 @@ template {
 
 .sixth-row .wrap {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sixth-row .wrap .inner-wrap {
+  display: flex;
 }
 
 .sixth-row .btn__pay {
   width: 16.8rem;
   height: 4.4rem;
   text-align: center;
-  margin-right: 2.1rem;
+  margin-bottom: 1.6rem;
   font-family: "Ubuntu-Medium";
   font-weight: 500;
   font-style: normal;
@@ -1991,6 +2133,12 @@ template {
 .sixth-row .policy-agreement {
   width: 22rem;
   margin-left: 0.6rem;
+  font-family: "Ubuntu-Regular";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  color: #828282;
 }
 
 @media screen and (min-width: 320px) {
@@ -2060,6 +2208,18 @@ template {
     margin-left: 1.5px;
     margin-right: 1.5px;
   }
+
+  .fifth-row-cols .col {
+    margin-left: 1.5px;
+    margin-right: 1.5px;
+  }
+}
+
+@media (min-width: 375px) {
+  .header--form-content .row__title__subtitle {
+    text-align: center;
+    margin-right: 21rem;
+  }
 }
 
 @media screen and (min-width: 480px) {
@@ -2114,6 +2274,11 @@ template {
   }
 
   .footer-cols .col__right {
+    margin-left: 1.5px;
+    margin-right: 1.5px;
+  }
+
+  .fifth-row-cols .col {
     margin-left: 1.5px;
     margin-right: 1.5px;
   }
@@ -2233,6 +2398,11 @@ template {
     margin-left: 2.5px;
     margin-right: 2.5px;
   }
+
+  .fifth-row-cols .col {
+    margin-left: 2.5px;
+    margin-right: 2.5px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -2244,6 +2414,10 @@ template {
   .container {
     padding-left: 10px;
     padding-right: 10px;
+  }
+
+  .footer::before {
+    bottom: 39.5rem;
   }
 
   .nav-list {
@@ -2313,6 +2487,19 @@ template {
     margin-left: 2.5px;
     margin-right: 2.5px;
   }
+
+  .slider-wrap {
+    width: 80%;
+  }
+
+  .fifth-row-cols {
+    justify-content: center;
+  }
+
+  .fifth-row-cols .col {
+    margin-left: 2.5px;
+    margin-right: 2.5px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -2324,6 +2511,10 @@ template {
   .container {
     padding-left: 10px;
     padding-right: 10px;
+  }
+
+  .footer::before {
+    bottom: 37.7rem;
   }
 
   .nav {
@@ -2485,7 +2676,7 @@ template {
     width: calc(50% - 5px);
   }
 
-  .swiper-slide:nth-child(2n) {
+  .review:nth-child(2n) {
     margin-top: 6rem;
   }
 
@@ -2507,9 +2698,36 @@ template {
     margin-left: 2.5px;
     margin-right: 2.5px;
   }
+
+  .header--form .nav-list--form,
+  .header--form .nav__btn {
+    display: none;
+  }
+
+  .fourth-row--additional .swiper-pagination {
+    display: none;
+  }
+
+  .slider-wrap {
+    width: 82%;
+  }
+
+  .fifth-row-cols .col {
+    margin-left: 2.5px;
+    margin-right: 2.5px;
+  }
 }
 
 @media screen and (min-width: 1366px) {
+  .footer::before {
+    position: absolute;
+    content: "";
+    top: -41rem;
+    transform: rotate(0deg);
+    width: 41rem;
+    height: 41rem;
+  }
+
   .header-content {
     background: url(../img/header__img@1x.png) 47% 1rem/40rem 40rem no-repeat, url(../img/icons/header_bg.svg) 64% 100%/cover no-repeat;
   }
@@ -2554,18 +2772,234 @@ template {
     background: url(../img/icons/creature.svg) 100% 100%/contain no-repeat;
   }
 
-  .header--form .logo::before {
+  .header--form .nav {
+    width: 140rem;
+    margin: auto;
+  }
+
+  .header--form .logo--form {
+    width: 16.5rem;
+    height: 6.5rem;
+    margin: 0 1.8rem 0 0;
+  }
+
+  .header--form .content-row {
+    align-items: flex-start;
+  }
+
+  .header--form .content-row:not(:last-child) {
+    margin-bottom: 4rem;
+  }
+
+  .header--form-content {
+    margin-left: 16.67%;
+  }
+
+  .header--form__title {
+    margin-right: 1.6rem;
+    font-family: "Ubuntu-Bold";
+    font-weight: bold;
+    font-style: normal;
+    font-size: 2.4rem;
+    line-height: 3.1rem;
+    color: #4A4545;
+  }
+
+  .header--form-content .row__title {
+    margin-bottom: 5.8rem;
+  }
+
+  .header--form-content .row__title::before {
+    width: 6.5rem;
+    height: 6.4rem;
+  }
+
+  .header--form-content .row__title--first::after {
+    top: -2.9rem;
+    left: -8.5rem;
+  }
+
+  .header--form-content .row__title--first::before {
+    left: -10.7rem;
+  }
+
+  .header--form-content .row__title--second::after {
+    left: -8.5rem;
+    top: -2.9rem;
+  }
+
+  .header--form-content .row__title--second::before {
+    left: -10.8rem;
+  }
+
+  .header--form-content .row__title--third::after {
+    left: -8.2rem;
+    top: -2.9rem;
+  }
+
+  .header--form-content .row__title--third::before {
+    left: -10.7rem;
+  }
+
+  .header--form-content .row__title--fourth::after {
+    left: -8.5rem;
+    top: -2.9rem;
+  }
+
+  .header--form-content .row__title--fourth::before {
+    left: -10.7rem;
+  }
+
+  .header--form-content .row__title--fifth::after {
+    left: -8.4rem;
+    top: -2.9rem;
+  }
+
+  .header--form-content .row__title--fifth::before {
+    left: -10.7rem;
+  }
+
+  .header--form-content .row__title__subtitle {
+    margin: 0 20.9rem 0 0;
+  }
+
+  .first-row__select {
+    justify-content: flex-start;
+  }
+
+  .first-row__select .card {
+    width: 25.6rem;
+  }
+
+  .first-row__select .card .img-wrap {
+    width: 25.6rem;
+  }
+
+  .first-row__select .card .img-wrap .name {
+    font-family: "Ubuntu-Bold";
+    font-weight: bold;
+    font-style: normal;
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+    color: #4A4545;
+  }
+
+  .first-row__select .card .img-wrap .price {
+    font-family: "Ubuntu-Bold";
+    font-weight: bold;
+    font-style: normal;
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+    color: #DD6D1C;
+  }
+
+  .first-row__select .card:not(:last-child) {
+    margin-right: 6rem;
+  }
+
+  .second-row-message {
+    margin-bottom: 0;
+  }
+
+  .second-row-message::before {
     position: absolute;
     content: "";
-    left: -2.2rem;
-    top: 27.2rem;
+    left: -13.7rem;
+    top: -39rem;
     width: 6.5rem;
-    height: 188rem;
+    height: 116rem;
     background: url(../img/icons/dots.svg) 100% 100%/contain no-repeat;
   }
 
-  .header--form__top {
+  .second-row-message textarea {
+    width: 61.2rem;
+  }
+
+  .third-row-upload {
     margin-bottom: 0;
+  }
+
+  .fourth-row--additional {
+    margin: 0 0 4rem 0;
+    padding-top: 2rem;
+  }
+
+  .fourth-row--additional .card .name {
+    font-family: "Ubuntu-Bold";
+    font-weight: bold;
+    font-style: normal;
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+    color: #4A4545;
+  }
+
+  .fourth-row--additional .card .price {
+    font-family: "Ubuntu-Bold";
+    font-weight: bold;
+    font-style: normal;
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+    color: #DD6D1C;
+  }
+
+  .row__title--fourth {
+    width: auto;
+  }
+
+  .slider-wrap {
+    width: 91%;
+  }
+
+  .total-slider {
+    display: none;
+  }
+
+  .fifth-row-cols {
+    flex-wrap: nowrap;
+  }
+
+  .fifth-row-cols .col {
+    width: calc(33.33333% - 5px);
+  }
+
+  .fifth-row-cols .col {
+    margin-bottom: 0;
+  }
+
+  .fifth-row-cols .col--second {
+    order: 0;
+  }
+
+  .fifth-row-cols .select-title {
+    margin-bottom: 0;
+  }
+
+  .fifth-row-cols label {
+    margin-bottom: 0;
+  }
+
+  .sixth-row {
+    margin-bottom: 0;
+  }
+
+  .sixth-row .wrap {
+    flex-direction: row;
+  }
+
+  .sixth-row .btn__pay {
+    margin-right: 2.1rem;
+    margin-bottom: 0;
+  }
+
+  .sixth-row .policy-agreement {
+    margin-right: 2.1rem;
+    margin-bottom: 0;
+    font-family: "Ubuntu-Regular";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: #828282;
   }
 }
 
@@ -2871,7 +3305,7 @@ template {
     margin-bottom: 11.2rem;
   }
 
-  .swiper-pagination {
+  .reviews-slider .swiper-pagination {
     display: none;
   }
 
