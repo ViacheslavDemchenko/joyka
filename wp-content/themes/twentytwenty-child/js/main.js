@@ -19,63 +19,20 @@
 (function () {
   var additionalSwiper = new Swiper('.fourth-row--additional', {
     speed: 200,
-    slidesPerView: 5,
-    loopedSlides: 5,
+    slidesPerView: 'auto',
+    // loopedSlides: 1,
     loop: true,
-    spaceBetween: 16,
-    slidesOffsetBefore: 25,
-    loopAdditionalSlides: 5,
+    spaceBetween: 10,
+    // centeredSlides: true,
+    slidesOffsetBefore: 50,
+    slidesOffsetAfter: 100,
+    // loopAdditionalSlides: 5,
     pagination: {
       el: '.swiper-pagination',
       type: 'bullets',
       clickable: true
-    },
-    breakpoints: {
-      320: {
-        slidesPerView: 2,
-        slidesOffsetBefore: -20,
-        centeredSlides: true
-      },
-      375: {
-        slidesPerView: 2,
-        slidesOffsetBefore: -25,
-        centeredSlides: true
-      },
-      425: {
-        slidesPerView: 2,
-        slidesOffsetBefore: -35,
-        centeredSlides: true
-      },
-      560: {
-        slidesPerView: 3,
-        slidesOffsetBefore: 70,
-        centeredSlides: true
-      },
-      768: {
-        slidesPerView: 3,
-        slidesOffsetBefore: -10,
-        centeredSlides: true
-      },
-      1024: {
-        slidesPerView: 4,
-        slidesOffsetBefore: -70,
-        centeredSlides: true
-      },
-      1366: {
-        slidesPerView: 5,
-        slidesOffsetBefore: 110
-      },
-      1920: {
-        slidesPerView: 5,
-        slidesOffsetBefore: 50
-      }
     }
   });
-  var screenWidth = window.screen.availWidth;
-
-  if (screenWidth >= 1366) {
-    additionalSwiper.destroy(true, true);
-  }
 })();
 "use strict";
 
@@ -140,11 +97,10 @@
 
 (function () {
   var reviewsSwiper = new Swiper('.reviews', {
-    speed: 400,
-    slidesPerView: 6,
-    loopedSlides: 6,
+    speed: 200,
+    slidesPerView: 1,
+    loopedSlides: 1,
     loop: true,
-    freeMode: true,
     spaceBetween: 39,
     slidesOffsetBefore: 165,
     pagination: {

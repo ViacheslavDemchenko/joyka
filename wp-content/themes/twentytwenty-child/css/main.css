@@ -1646,7 +1646,7 @@ template {
 .header--form-content .row__title::before {
   position: absolute;
   content: "";
-  top: -4rem;
+  top: -1.5rem;
   width: 4.5rem;
   height: 4.4rem;
   background: url(../img/icons/work_elipse_brown.svg) 100% 100%/cover no-repeat;
@@ -1655,7 +1655,6 @@ template {
 .header--form-content .row__title::after {
   position: absolute;
   z-index: 2;
-  top: -4rem;
   z-index: 2;
   font-family: "Ubuntu-Bold";
   font-weight: bold;
@@ -1668,46 +1667,56 @@ template {
 .header--form-content .row__title--first::after {
   content: "1";
   left: 9.5rem;
+  top: -3.7rem;
 }
 
 .header--form-content .row__title--first::before {
   left: 8rem;
+  top: -4rem;
 }
 
 .header--form-content .row__title--second::after {
   content: "2";
   left: 10.5rem;
+  top: -3.6rem;
 }
 
 .header--form-content .row__title--second::before {
   left: 9rem;
+  top: -4rem;
 }
 
 .header--form-content .row__title--third::after {
   content: "3";
   left: 10.5rem;
+  top: -3.7rem;
 }
 
 .header--form-content .row__title--third::before {
   left: 9rem;
+  top: -4rem;
 }
 
 .header--form-content .row__title--fourth::after {
   content: "4";
   left: 14.5rem;
+  top: -3.7rem;
 }
 
 .header--form-content .row__title--fourth::before {
   left: 13rem;
+  top: -4rem;
 }
 
 .header--form-content .row__title--fifth::after {
   content: "5";
   left: 8.5rem;
+  top: -3.7rem;
 }
 
 .header--form-content .row__title--fifth::before {
   left: 7rem;
+  top: -4rem;
 }
 
 .header--form-content .row__title__subtitle {
@@ -1832,8 +1841,7 @@ template {
 }
 
 .fourth-row--additional .card {
-  width: 19rem !important;
-  height: 26.7rem;
+  width: auto !important;
   margin-bottom: 2rem;
   display: flex;
   flex-direction: column;
@@ -1963,10 +1971,6 @@ template {
 .slider-wrap {
   width: 100%;
   overflow: hidden;
-}
-
-.swiper-wrapper {
-  flex-wrap: wrap !important;
 }
 
 .total-slider {
@@ -2772,11 +2776,6 @@ template {
     background: url(../img/icons/creature.svg) 100% 100%/contain no-repeat;
   }
 
-  .header--form .nav {
-    width: 140rem;
-    margin: auto;
-  }
-
   .header--form .logo--form {
     width: 16.5rem;
     height: 6.5rem;
@@ -2815,48 +2814,53 @@ template {
   }
 
   .header--form-content .row__title--first::after {
-    top: -2.9rem;
+    top: -.5rem;
     left: -8.5rem;
   }
 
   .header--form-content .row__title--first::before {
     left: -10.7rem;
+    top: -1.5rem;
   }
 
   .header--form-content .row__title--second::after {
     left: -8.5rem;
-    top: -2.9rem;
+    top: -.5rem;
   }
 
   .header--form-content .row__title--second::before {
     left: -10.8rem;
+    top: -1.7rem;
   }
 
   .header--form-content .row__title--third::after {
     left: -8.2rem;
-    top: -2.9rem;
+    top: -.5rem;
   }
 
   .header--form-content .row__title--third::before {
     left: -10.7rem;
+    top: -1.5rem;
   }
 
   .header--form-content .row__title--fourth::after {
     left: -8.5rem;
-    top: -2.9rem;
+    top: -.5rem;
   }
 
   .header--form-content .row__title--fourth::before {
     left: -10.7rem;
+    top: -1.5rem;
   }
 
   .header--form-content .row__title--fifth::after {
     left: -8.4rem;
-    top: -2.9rem;
+    top: -.5rem;
   }
 
   .header--form-content .row__title--fifth::before {
     left: -10.7rem;
+    top: -1.5rem;
   }
 
   .header--form-content .row__title__subtitle {
@@ -2904,10 +2908,11 @@ template {
   .second-row-message::before {
     position: absolute;
     content: "";
+    z-index: -1;
     left: -13.7rem;
-    top: -39rem;
+    top: -47rem;
     width: 6.5rem;
-    height: 116rem;
+    height: 164rem;
     background: url(../img/icons/dots.svg) 100% 100%/contain no-repeat;
   }
 
